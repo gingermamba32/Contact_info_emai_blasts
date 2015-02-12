@@ -1,0 +1,45 @@
+extends layout
+
+block content
+	h1 EMAIL VERIFICATION with Nodemailer
+	div.content
+		form(action='/', name='contactus', id='contactus', method='post')
+			fieldset
+				p
+					label(for='name') Name:
+					br
+					input(name='name', type='text', value='', id='name')
+				p
+					label(for='email') Email:
+					br
+					input(name='email', type='text', value='', id='email')
+				p
+					label(for='message') Message:
+					br
+					textarea(name='message', cols='40', rows='10', id='message')
+				p
+					input(name='submit', type='submit', value='Send', id='submit')
+
+	if(typeof msg !== 'undefined')
+			if(!!err)
+				div(class='msgbox err') #{msg}
+			else
+				div(class='msgbox success') #{msg}
+
+
+
+	h1 Gather Clients into database for email blasts
+	div.content
+		form(action='/', name='Databaseme', id='databaseme', method='post')
+			fieldset
+				p
+					label(for='email2') EMAIL:
+					br
+					input(name='email2', type='text', value='', id='email2')
+				p
+					input(name='submit', type='submit', value='Send', id='submit')
+
+
+
+
+
